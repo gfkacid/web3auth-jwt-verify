@@ -4,7 +4,7 @@ const NodeCache = require('node-cache');
 const bodyParser = require('body-parser');
 
 const app = express();
-const port = 3000;
+const port = 5000;
 const cache = new NodeCache();
 
 // Configure body-parser middleware
@@ -59,3 +59,5 @@ app.post('/verify-jwt', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
 });
+
+module.exports = app;
